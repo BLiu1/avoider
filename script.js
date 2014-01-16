@@ -105,8 +105,8 @@ function mainGame(){
 		}
 		
 		// move obstacles down one row
-		for(i=19; i>0; i--){ //for each row
-			for(j=10; j>0; j--){ //for each column/cell
+		for(i=19; i>0; i--){ // for each row
+			for(j=10; j>0; j--){ // for each column/cell
 				k = i + 1;
 				if(getEl(i + "-" + j).className === "obstacle" && getEl(k + "-" + j).className === "character"){
 					collide = true;
