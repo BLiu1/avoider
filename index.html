@@ -3,13 +3,46 @@
 <head>
 	<title>BLiu1's Website - Avoider Game</title>
 	<meta charset="utf-8" />
-	<link rel="stylesheet" type="text/css" href="pages.css">
-	<link rel="stylesheet" type="text/css" href="button-link.css">
+	<link rel="shortcut icon" href="http://bliu1.tk/favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" type="text/css" href="http://bliu1.tk/pages/pages.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="license" type="text/html" href="http://opensource.org/licenses/MIT" />
-	<style></style>
+	<style>
+	.button-link {
+		margin: 20px;
+		padding: 15px 20px;
+		display: inline-block;
+		background: #0D5EFF;
+		font-family: Consolas, monospace;
+		color: #FFFFFF;
+		text-decoration: none;
+		border-radius: 10px;
+		border: solid 1px #073899;
+		text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+		box-shadow: inset 0 2px 2px rgba(255, 255, 255, 0.4), 0 2px 2px rgba(0, 0, 0, 0.2);
+		-webkit-user-select:none;
+		-moz-user-select:none;
+		-ms-user-select:none;
+		user-select:none;
+	}
+	.button-link:hover {
+		background: #3378FF;
+		color: #FFFFFF;
+		border: solid 1px #062F80;
+	}
+	.button-link:focus{
+		outline: 1px solid #0000FF;
+	}
+	.button-link:active {
+		box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.8);
+		background: #0B54E6;
+		color: #DDDDDD;
+		border: solid 1px #062F80;
+	}
+	</style>
 </head>
 <body>
+	<a href="https://github.com/BLiu1/avoider" id="github_ribbon"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://github-camo.global.ssl.fastly.net/52760788cde945287fbb584134c4cbc2bc36f904/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f77686974655f6666666666662e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png"></a>
 	<div id="overlay1" class="overlay">
 		<h1>Avoider</h1>
 		<button id="start" class="button-link">Start</button>
@@ -45,6 +78,19 @@
 		<div id="help2" class="help button-link">Help</div>
 		<a href="/pages/" id="back">Back</a>
 	</div>
-	<script src="script-min.js"></script>
+	<?php include('../stats.inc'); ?>
+	<script src="/pages/avoider/script-min.js"></script>
+		<!-- AddThis Smart Layers BEGIN -->
+	<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52c236665e0d4dec"></script>
+	<script type="text/javascript">
+	addthis.layers({
+		'theme' : 'transparent',
+		'share' : {
+		'position' : 'left',
+		'numPreferredServices' : 5
+		}
+	});
+	</script>
+	<!-- AddThis Smart Layers END -->
 </body>
 </html>

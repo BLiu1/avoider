@@ -1,4 +1,4 @@
-/**
+﻿/**
  *  BLiu1.tk
  *  
  *  Avoider Game
@@ -10,7 +10,30 @@
  *  
  */
 
-var playing = false,
+var table = [
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+    ],
+    playing = false,
     difficulty,
     points = 0,
     lives = 5,
@@ -64,7 +87,7 @@ function sLevel(d){
 
 function sColor(charColor){
 	hideOverlay(3);
-	document.getElementsByTagName("style")[0].innerHTML = ".character { background-color:" + charColor + "}";
+	document.getElementsByTagName("style")[0].innerHTML += ".character { background-color:" + charColor + "}";
 	startGame();
 }
 
@@ -105,8 +128,8 @@ function mainGame(){
 		}
 		
 		// move obstacles down one row
-		for(i=19; i>0; i--){ // for each row
-			for(j=10; j>0; j--){ // for each column/cell
+		for(i=19; i>0; i--){ //for each row
+			for(j=10; j>0; j--){ //for each column/cell
 				k = i + 1;
 				if(getEl(i + "-" + j).className === "obstacle" && getEl(k + "-" + j).className === "character"){
 					collide = true;
@@ -170,6 +193,8 @@ function mainGame(){
 		}
 		
 		collide = false; // clear collision
+		if(playing === false){return;}
+		if(paused === true){return;}
 		setTimeout(gameTick, 500 * speed);
 	}
 }
@@ -242,7 +267,7 @@ function clearMessage(){
 }
 
 function displayHelp(){
-	alert("Help and Information\n------------------------\n\nThe objective of this game is to use the arrow keys to move the character and avoid the falling obstacles./nFive points are awarded for each row of obstacles avoided./nAfter each twenty rows avoided, you level up. When you level up, the obstacles fall 5% faster, and 10 times the level number is added to your score./nIf you are hit by an obstacle head on, then one life is taken away. If you bump into one from the side, it stops you. Once you have no more lives, the game stops./nTo pause, press p.");
+	alert("Help and Information\n------------------------\n\nThe objective of this game is to use the arrow keys to move the character and avoid the falling obstacles.\nFive points are awarded for each row of obstacles avoided.\nAfter each twenty rows avoided, you level up. When you level up, the obstacles fall 5% faster, and 10 times the level number is added to your score.\nIf you are hit by an obstacle head on, then one life is taken away. If you bump into one from the side, it stops you. Once you have no more lives, the game stops.\nTo pause, press p.");
 }
 
 function endGame(){
