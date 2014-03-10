@@ -1,6 +1,6 @@
 # Avoider
 
-This is a little webgame I made where you try to avoid the obstacles coming down from the top.
+This is a little webgame I made where you try to avoid the obstacles coming down from the top by moving a character with the arrow keys.
 
 ### Game Instructions
 
