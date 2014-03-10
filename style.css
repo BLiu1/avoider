@@ -1,6 +1,6 @@
-body{text-align: center;}
+﻿body{text-align: center;}
 
-/****Overlays****/
+/**** Overlays ****/
 
 .overlay {
 	padding: 3em;
@@ -74,7 +74,7 @@ body{text-align: center;}
 #overlay3 #c6 {background-color: #00FFFF; border-color: #00FFFF;}
 #overlay3 #c7 {background-color: #FFFFFF; border-color: #FFFFFF;}
 
-/****End Overlays****/
+/**** End Overlays ****/
 
 table {
 	border: 1px solid #AAAAAA;
@@ -94,7 +94,7 @@ td {
 }
 
 .character {
-	/*** To Be Defined ***/
+	/* Background-Color To Be Defined */
 	box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
 }
 
@@ -137,4 +137,38 @@ td {
 	color: red;
 	font-size: 1.5em;
 	font-weight: bold;
+}
+
+/**** Button Styles ****/
+
+.button-link {
+	margin: 20px;
+	padding: 15px 20px;
+	display: inline-block;
+	background: #0D5EFF;
+	font-family: Consolas, monospace;
+	color: #FFFFFF;
+	text-decoration: none;
+	border-radius: 10px;
+	border: solid 1px #073899;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+	box-shadow: inset 0 2px 2px rgba(255, 255, 255, 0.4), 0 2px 2px rgba(0, 0, 0, 0.2);
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	user-select:none;
+}
+.button-link:hover {
+	background: #3378FF;
+	color: #FFFFFF;
+	border: solid 1px #062F80;
+}
+.button-link:focus{
+	outline: 1px solid #0000FF;
+}
+.button-link:active {
+	box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.8);
+	background: #0B54E6;
+	color: #DDDDDD;
+	border: solid 1px #062F80;
 }
